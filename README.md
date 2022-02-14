@@ -12,4 +12,12 @@ Clicando em "*Escultor*" teremos a caixa de diálogo para saber o tamanho do qua
 
 Após a seleção do tamanho do quadro, no lado direito será possível ver os parâmetros para as ferramentas de trabalho, como mostra a Imagem 3.
 
-![imagem2](/tutorial/imagem3.png)
+![imagem3](/tutorial/imagem3.png)
+
+Com uso das ferramentas, das quais PutEllipsoid e CutEllipsoid não foram implementadas com sucesso, é possível realizar diversos desenhos, como o exemplo na Imagem 4.
+
+![imagem4](/tutorial/imagem4.png)
+
+Após a realização do desenho no canto superior esquerdo, no botão "*Menu*" há a opção de salvar o desenho e sair do programa, como mostra na Imagem 5. 
+
+![imagem5](/tutorial/imagem5.png)
