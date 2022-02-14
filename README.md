@@ -1,5 +1,5 @@
 # Projeto Escultor 3D com Interface
-*Projeto desenvolvido por Levi Ramom e Renan de Aquino para a disciplina de Progamação Avançada**
+*Projeto desenvolvido por Levi Ramom e Renan de Aquino para a disciplina de Progamação Avançada*
 
 ## Uso do software
 Após executar o programa será possível perceber o menu de interface que há. No lado esquerdo temos as ferramentas de trabalho, como mostra a Imagem 1. 
