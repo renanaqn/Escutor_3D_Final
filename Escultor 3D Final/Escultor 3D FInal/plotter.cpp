@@ -12,6 +12,8 @@
 #include<iostream>
 using namespace std;
 
+// O plotter ele tem a função de organizar o que está rolando
+// saber onde está o mouse, qual ferramenta selecionada
 Plotter::Plotter(QWidget *parent) : QWidget(parent)
 {
     numx = numy = numz =0;
@@ -26,8 +28,7 @@ Plotter::Plotter(QWidget *parent) : QWidget(parent)
 
 }
 
-void Plotter::mousePressEvent(QMouseEvent *event)
-{
+void Plotter::mousePressEvent(QMouseEvent *event){
 
     if(numx !=0 && numy !=0 && numz !=0){
         if(event->button() == Qt::LeftButton){
@@ -231,8 +232,7 @@ void Plotter::ativaVoxel(Voxel &v, QColor cor){
     v.b = cor.blue();
     v.a = cor.alpha();
 }
-void Plotter::desativaVoxel(Voxel &v)
-{
+void Plotter::desativaVoxel(Voxel &v){
     v.isOn = false;
 }
 void Plotter::defCx(int _x){
@@ -246,12 +246,10 @@ void Plotter::defCy(int _y){
 void Plotter::defCz(int _z){
     zc = _z;
 }
-void Plotter::defRaio(int _re)
-{
+void Plotter::defRaio(int _re){
     raio = _re;
 }
 
-void Plotter::salvaEscultor()
-{
-    s->writeOFF((char*) "projeto.off");
+void Plotter::salvaEscultor(){
+    s->writeOFF((char*) "desenho.off");
 }

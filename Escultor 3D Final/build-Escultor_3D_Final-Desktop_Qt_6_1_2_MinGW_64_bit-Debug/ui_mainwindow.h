@@ -67,11 +67,11 @@ public:
     QWidget *widget2;
     QGridLayout *gridLayout;
     QLabel *label_11;
-    QLabel *label;
-    QSlider *sliderR;
-    QLabel *label_2;
     QSlider *sliderG;
+    QLabel *label_2;
+    QLabel *label;
     QLabel *label_3;
+    QSlider *sliderR;
     QSlider *sliderB;
     QMenuBar *menuBar;
     QMenu *menuMenu;
@@ -256,10 +256,27 @@ public:
 
         gridLayout->addWidget(label_11, 0, 0, 1, 2);
 
+        sliderG = new QSlider(widget2);
+        sliderG->setObjectName(QString::fromUtf8("sliderG"));
+        sliderG->setMaximum(255);
+        sliderG->setOrientation(Qt::Horizontal);
+
+        gridLayout->addWidget(sliderG, 2, 1, 1, 1);
+
+        label_2 = new QLabel(widget2);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        gridLayout->addWidget(label_2, 2, 0, 1, 1);
+
         label = new QLabel(widget2);
         label->setObjectName(QString::fromUtf8("label"));
 
         gridLayout->addWidget(label, 1, 0, 1, 1);
+
+        label_3 = new QLabel(widget2);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        gridLayout->addWidget(label_3, 3, 0, 1, 1);
 
         sliderR = new QSlider(widget2);
         sliderR->setObjectName(QString::fromUtf8("sliderR"));
@@ -268,25 +285,9 @@ public:
 
         gridLayout->addWidget(sliderR, 1, 1, 1, 1);
 
-        label_2 = new QLabel(widget2);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-
-        gridLayout->addWidget(label_2, 2, 0, 1, 1);
-
-        sliderG = new QSlider(widget2);
-        sliderG->setObjectName(QString::fromUtf8("sliderG"));
-        sliderG->setMaximum(255);
-        sliderG->setOrientation(Qt::Horizontal);
-
-        gridLayout->addWidget(sliderG, 2, 1, 1, 1);
-
-        label_3 = new QLabel(widget2);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-
-        gridLayout->addWidget(label_3, 3, 0, 1, 1);
-
         sliderB = new QSlider(widget2);
         sliderB->setObjectName(QString::fromUtf8("sliderB"));
+        sliderB->setStyleSheet(QString::fromUtf8(""));
         sliderB->setMaximum(255);
         sliderB->setOrientation(Qt::Horizontal);
 
@@ -317,6 +318,8 @@ public:
         mainToolBar->addAction(actionCutBox);
         mainToolBar->addAction(actionPutSphere);
         mainToolBar->addAction(actionCutSphere);
+        mainToolBar->addAction(actionPutEllipsoid);
+        mainToolBar->addAction(actionCutEllipsoid);
 
         retranslateUi(MainWindow);
         QObject::connect(actionPutVoxel, SIGNAL(triggered(bool)), MainWindow, SLOT(execTipo(bool)));
@@ -359,8 +362,8 @@ public:
         label_12->setText(QCoreApplication::translate("MainWindow", "Raio da Esfera", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "Opacidade", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Cor do Voxel", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Vermelho", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Verde", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Vermelho", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Azul", nullptr));
         menuMenu->setTitle(QCoreApplication::translate("MainWindow", "Menu", nullptr));
     } // retranslateUi

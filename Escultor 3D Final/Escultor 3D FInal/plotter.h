@@ -8,8 +8,7 @@
 #include "defmatriz.h"
 #include "sculptor.h"
 using namespace std;
-class Plotter : public QWidget
-{
+class Plotter : public QWidget {
     Q_OBJECT
 private:
     int numx, numy, numz;
@@ -35,7 +34,7 @@ public:
     void mousePressEvent(QMouseEvent *event);
 
 signals:
-
+// esses são os sinais a serem utilizados durante a aplicação
     void alteraSlidersX(int,int);
     void alteraSlidersY(int,int);
     void alteraSlidersZ(int,int);

@@ -3,6 +3,9 @@
 
 #include <QDialog>
 
+// aqui será definido o tamanho da matriz a ser trabalhada
+// o quadro do desenho
+
 namespace Ui {
 class DefMatriz;
 }

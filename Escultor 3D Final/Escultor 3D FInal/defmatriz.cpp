@@ -2,6 +2,8 @@
 #include "ui_defmatriz.h"
 
 DefMatriz::DefMatriz(QWidget *parent) :
+    //a partir da caixa de diálogo ele vai relacionar os dados inseridos pelo usuário
+
     QDialog(parent),
     ui(new Ui::DefMatriz){
     ui->setupUi(this);

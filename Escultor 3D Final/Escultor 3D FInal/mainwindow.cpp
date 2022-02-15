@@ -4,8 +4,10 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow) 
-{
+    ui(new Ui::MainWindow) {
+
+    //aqui será feita as conexões entre os Sinais e Slots
+
     ui->setupUi(this);
 
     connect(ui->actionEscultor,SIGNAL(triggered(bool)),ui->widget,SLOT(definirMatriz()));
@@ -43,11 +45,11 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow(){
     delete ui;
 }
-
+//sai do programa
 void MainWindow::Sair(){
     exit(0);
 }
-
+//sistema de análise de comparação de opções selecionadas
 void MainWindow::execTipo(bool){
     if (ultimaforma.compare(ui->actionPutVoxel->text()) == 0){
         ui->actionPutVoxel->setChecked(false);

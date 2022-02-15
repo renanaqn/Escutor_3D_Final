@@ -73,7 +73,7 @@ public:
 
     void retranslateUi(QDialog *DefMatriz)
     {
-        DefMatriz->setWindowTitle(QCoreApplication::translate("DefMatriz", "Dialog", nullptr));
+        DefMatriz->setWindowTitle(QCoreApplication::translate("DefMatriz", "Qual o tamanho?", nullptr));
         label->setText(QCoreApplication::translate("DefMatriz", "X", nullptr));
         label_2->setText(QCoreApplication::translate("DefMatriz", "Y", nullptr));
         label_3->setText(QCoreApplication::translate("DefMatriz", "Z", nullptr));
